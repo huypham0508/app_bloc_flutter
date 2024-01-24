@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "431762843125",
+    "project_id": "lo-to-derasoft",
+    "storage_bucket": "lo-to-derasoft.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431762843125:android:4ce50110832ff0dd5c2cbc",
+        "android_client_info": {
+          "package_name": "com.example.app_bloc_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkNsWJZhb_g1Ew5RJUnCh-a6oWH2z-5vI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
