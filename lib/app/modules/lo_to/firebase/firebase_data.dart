@@ -3,24 +3,25 @@ import 'dart:convert';
 import 'package:firebase_database/firebase_database.dart';
 
 class LotoFirebaseDatabase {
-  final DatabaseReference refData;
-  final DatabaseReference refUsers;
+  final DatabaseReference _refData;
+  final DatabaseReference _refUsers;
 
   LotoFirebaseDatabase({
-    required this.refData,
-    required this.refUsers,
-  });
+    required DatabaseReference refData,
+    required DatabaseReference refUsers,
+  })  : _refData = refData,
+        _refUsers = refUsers;
 
   Future listenData(Function(DatabaseEvent event) onListener) async {
-    return refData.onValue.listen((event) => onListener(event));
+    return _refData.onValue.listen((event) => onListener(event));
   }
 
   Future listenUsers(Function(DatabaseEvent event) onListener) async {
-    return refUsers.onValue.listen((event) => onListener(event));
+    return _refUsers.onValue.listen((event) => onListener(event));
   }
 
   Future updateUserName(String userName, List oldData) async {
     String newListUsers = jsonEncode(oldData..add(userName));
-    return refUsers.set(newListUsers);
+    return _refUsers.set(newListUsers);
   }
 }
