@@ -5,8 +5,8 @@ class LocalDataSource {
 
   final SharedPreferences sf;
 
-  Future<void> saveUserName(String token) async {
-    await sf.setString('userName', token);
+  Future<void> saveUserName(String userName) async {
+    await sf.setString('userName', userName);
   }
 
   Future<String?> getUserName() async {
@@ -15,5 +15,17 @@ class LocalDataSource {
 
   Future<void> deleteUserName() async {
     await sf.remove('userName');
+  }
+
+  Future<void> saveToken(String token) async {
+    await sf.setString('token', token);
+  }
+
+  Future<String?> getToken() async {
+    return sf.getString('token');
+  }
+
+  Future<void> deleteToken() async {
+    await sf.remove('token');
   }
 }

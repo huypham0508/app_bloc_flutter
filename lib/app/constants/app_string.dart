@@ -11,6 +11,8 @@ abstract class CommonString {
 abstract class ConfigApi {
   static const String BASEURL = "https://bdev.tr90app.com/mobile.php";
   static const String APIURL = "https://bdev.tr90app.com";
+  static const String GRAPH_QL_APIURL =
+      "https://graphql-jwt-project.onrender.com/graphql";
   static const String VERSION_APP = "dev-version-sg-my-id";
   static const String IMAGE_LINK_TRAINING =
       "https://bdev.tr90app.com/upload/1/trainings/";
